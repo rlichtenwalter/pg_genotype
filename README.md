@@ -15,5 +15,31 @@ unzip pg_genotype.zip
 
 <h3>Usage</h3>
 <pre>
+testuser=# SELECT 'AT'::genotype;
+ genotype
+----------
+ AT
+(1 row)
 
+testuser=# SELECT 'TA'::genotype;
+ genotype
+\----------
+ TA
+(1 row)
+
+testuser=# SELECT 'ID'::genotype;
+ genotype
+\----------
+ ID
+(1 row)
+
+testuser=# SELECT 'TD'::genotype;
+ genotype
+\----------
+ TD
+(1 row)
+
+testuser=# SELECT 'BC'::genotype;
+ERROR:  invalid input syntax for genotype: "BC"
+LINE 1: SELECT 'BC'::genotype;
 </pre>
